@@ -1,14 +1,27 @@
+.boardGame {
+
+}
+
 
 .square {
   border: medium solid black;
   height: 100px;
   width: 100px;
-  display: inline-block;
-  margin: -3px;
+
+
 }
 
+.smallSquare{
+  height: 6em;
+  width: 5em;
+
+}
+
+
 .square.top {
+
   border-top: 0;
+
 }
 .square.top.left {
   border-left: 0;
@@ -33,3 +46,21 @@
 .square.bottom.right {
   border-right: 0;
 }
+
+
+.playerOneMove {
+  font-size: 10px;
+   justy-content: center;
+}
+.playerTwoMove {
+  font-size: 10px;
+   justy-content: center;
+}
+
+
+
+
+
+
+
+

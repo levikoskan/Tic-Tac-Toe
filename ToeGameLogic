@@ -1,0 +1,34 @@
+
+
+interactivity
+
+game logic
+
+when the user clicks a button I want that button to be filled in with an x or o
+  each cell needs to listen for the click
+  could toggle class in some way
+  one click for x two clicks for o
+
+  var playerMove = 0
+  .on(click, function (){
+    if (playerMove ===1) {
+      toggle class o
+      playerMove = 2
+    }
+    else if (playerMove === 2){
+      reset element
+      playerMove = 0
+    }else {}
+      toggle class x
+      PlayerMove= 1;
+    }
+
+  })
+
+
+
+reset = all elements.val(' ')
+
+media query{
+  when px gets below 750px toggle smallSquare
+}
