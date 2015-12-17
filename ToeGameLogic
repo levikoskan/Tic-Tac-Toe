@@ -122,9 +122,24 @@ function(){
 
 var winsX = 0
 var winsO = 0
-var allTimesGamePlayerd = 0
+var allTimesGamePlayed = 0
 
+I want to check to see whose won. if player one has one then add a count
+to the winsX counter. and likewise for wins)
 
+allTimesGamePlayed += 1;
+
+function hisWins(){
+
+if (player === 1){
+  winsX += 1
+  $('winsHistoryForX').append(winsX)
+} else {
+  winsO += 1
+  $('').append(winsO)
+}
+
+}
 
 
 

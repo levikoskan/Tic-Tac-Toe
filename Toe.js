@@ -6,6 +6,9 @@ $(function(){
   var playerMove = 0;
   var count =0;
   var theGame = false;
+  var winsX = 0
+  var winsO = 0
+  var allTimesGamePlayed = 0
 
 // Anytime you click a square element it will change
   $('.square').on('click', function () {
@@ -26,11 +29,7 @@ $(function(){
         $(this).html('<p>x</p>');
         $(this).addClass('1');
         playerMove = 1;
-
-
       }
-
-      checkWinner(playerMove)
     });
 
 
@@ -56,19 +55,14 @@ $(function(){
       $(this).html('<p>x</p>');
       $(this).addClass('1');
       playerMove = 1;
-
-
     }
-
-    checkWinner(playerMove)
   });
     //remove classes
     $('div').find('.1').removeClass('1');
     $('div').find('.2').removeClass('2');
-
     count = 0;
     playerMove = 0;
-
+    console.log(playerMove);
   });
 
 
@@ -80,6 +74,8 @@ $(function(){
       count += 1
       console.log(count);
       // tie game conditional
+      checkWinner(playerMove)
+
       if (count >= 9 && theGame === false) {
       alert("Cat's Tail");
       }
@@ -93,34 +89,54 @@ $(function(){
     if ($('.top.left').hasClass(player) && $('.top.center').hasClass(player) && $('.top.right').hasClass(player)){
       alert("Player "+ player +"won by completing the top row.");
       theGame = true;
+      //for history tracking
+      allTimesGamePlayed += 1;
+      $('#allTimeHistory').empty();
+      $('#allTimeHistory').append(allTimesGamePlayed);
+      if (player === 1){
+        winsX += 1;
+        $('#xHistory').empty();
+        $('#xHistory').append(winsX);
+      } else {
+        winsO += 1;
+        $('#oHistory').empty();
+        $('#oHistory').append(winsO);
+      }
     }
     if ($('.mid.left').hasClass(player) && $('.mid.center').hasClass(player) && $('.mid.right').hasClass(player)){
       alert("Player "+ player +"won by completing the middle row.");
       theGame = true;
+      hisWins();
     }
     if ($('.bottom.left').hasClass(player) && $('.bottom.center').hasClass(player) && $('.bottom.right').hasClass(player)){
       alert("Player "+ player +"won by completing the bottom row.");
       theGame = true;
+      hisWins();
     }
     if ($('.top.left').hasClass(player) && $('.mid.left').hasClass(player) && $('.bottom.left').hasClass(player)){
       alert("Player "+ player +"won by completing the left column");
       theGame = true;
+      hisWins();
     }
     if ($('.top.center').hasClass(player) && $('.mid.center').hasClass(player) && $('.bottom.center').hasClass(player)){
       alert("Player "+ player +"won by completing the middle column.");
       theGame = true;
+      hisWins();
     }
     if ($('.top.right').hasClass(player) && $('.mid.right').hasClass(player) && $('.bottom.right').hasClass(player)){
       alert("Player "+ player +"won by completing the right column.");
       theGame = true;
+      hisWins();
     }
     if ($('.top.left').hasClass(player) && $('.mid.center').hasClass(player) && $('.bottom.right').hasClass(player)){
       alert("Player "+ player +"won by completing the diagonal");
       theGame = true;
+      hisWins();
     }
     if ($('.top.right').hasClass(player) && $('.mid.center').hasClass(player) && $('.bottom.left').hasClass(player)){
       alert("Player "+ player +"won by completing the diagonal");
       theGame = true;
+      hisWins();
     }
 
     // var topChecker = $('.topRow').children();
@@ -157,3 +173,25 @@ $(function(){
   }
 
 });
+
+//adding the history of the player
+function hisWins(){
+  allTimesGamePlayed += 1;
+  $('#allTimeHistory').empty();
+  $('#allTimeHistory').append(allTimesGamePlayed);
+
+  if (player === 1){
+    winsX += 1;
+    $('#xHistory').empty();
+    $('#xHistory').append(winsX);
+  } else {
+    winsO += 1;
+    $('#oHistory').empty();
+    $('#oHistory').append(winsO);
+  }
+};
+
+
+
+
+
