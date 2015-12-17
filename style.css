@@ -53,15 +53,13 @@ p {
   ;
 }
 
-/*.playerOneMove {
-  font-size: 4em;
+
+.nob {
+  text-align: center;
+  margin-top: 20px;
 
 
 }
-.playerTwoMove {
-  font-size: 50px;
-  align-content: center;
-}*/
 
 
 
