@@ -20,53 +20,77 @@
       <div class="col-md-2 col-xs-1"></div>
 
       <div class="col-md-8 col-xs-10 boardGame">
+        <div class="row">
+          <h1 id="tic">Tic Tac Toe</h1>
+        </div>
             <div class="row topRow">
-              <div class="col-md-4 col-xs-4 square box top left"></div>
-              <div class="col-md-4 col-xs-4 square top center"></div>
-              <div class="col-md-4 col-xs-4 square box top right"></div>
+              <div class="col-md-8 col-xs-12">
+                <div class="col-md-4 col-xs-4 square box top left"></div>
+                <div class="col-md-4 col-xs-4 square top center"></div>
+                <div class="col-md-4 col-xs-4 square box top right"></div>
+              </div>
+
+              <div class="col-md-2"></div>
             </div>
 
             <div class="row midRow">
-              <div class="col-md-4 col-xs-4 square mid left"></div>
-              <div class="col-md-4 col-xs-4 square mid center"></div>
-              <div class="col-md-4 col-xs-4 square mid right"></div>
+              <div class="col-md-8 col-xs-12">
+                <div class="col-md-4 col-xs-4 square mid left"></div>
+                <div class="col-md-4 col-xs-4 square mid center"></div>
+                <div class="col-md-4 col-xs-4 square mid right"></div>
+              </div>
+
+              <div class="col-md-2"></div>
+
+
             </div>
 
             <div class="row bottomRow">
-              <div class="col-md-4 col-xs-4 square bottom left"></div>
-              <div class="col-md-4 col-xs-4 square bottom center"></div>
-              <div class="col-md-4 col-xs-4 square bottom right"></div>
+              <div class="col-md-8 col-xs-12">
+                <div class="col-md-4 col-xs-4 square bottom left"></div>
+                <div class="col-md-4 col-xs-4 square bottom center"></div>
+                <div class="col-md-4 col-xs-4 square bottom right"></div>
+              </div>
+
+              <div class="col-md-4">
+                <!-- need to use positioning to push these to the top of the page
+                  and then have them wrap to the bottom when the screen shrinks -->
+                <input id="submit" type="button" value="Submit Choice">
+
+                <input id="newGame" type="button" value="New Game">
+
+                <div class="row">
+
+                  <table class="table table-condensed">
+                    <tr>Wins History</tr>
+                    <tr>
+                     <td>Player X wins</td>
+                     <td><div id="xHistory"></div></td>
+                    </tr>
+                    <tr>
+                      <td>Player O Wins</td>
+                      <td><div id="oHistory"></div></td>
+                    </tr>
+                    <tr>
+                      <td>All Time Games Played</td>
+                      <td><div id="allTimeHistory"></div></td>
+
+                    </tr>
+                  </table>
+
+                </div>
+
+              </div>
+
+
             </div>
 
-      </div>
 
       <div class="col-md-2">
-        <div class="row">
-            <input id="submit" type="button" value="Submit Choice">
 
-            <input id="newGame" type="button" value="New Game">
-            <div>Wins History
-              <div id="xHistory"></div>
-              <div id="oHistory"></div>
-              <div id="allTimeHistory"></div>
-            </div>
-
+        </div>
         </div>
       </div>
-
-     <!--  <div class="col-md-2">
-        <div class="row nob">
-          <div class="col-md-12">
-            <input id="submit" type="button" value="Submit Choice">
-          </div>
-        </div>
-
-        <div class="row nob">
-          <div class="col-md-12">
-            <input id="newGame" type="button" value="New Game">
-          </div>
-        </div>
-      </div> -->
 
 
   </div>

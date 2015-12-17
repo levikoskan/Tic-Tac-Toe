@@ -141,7 +141,9 @@ if (player === 1){
 
 }
 
-
+/*@media (max-width: 750px) {
+    $('body').toggleClass('smallSquare');
+    }*/
 
 
 
