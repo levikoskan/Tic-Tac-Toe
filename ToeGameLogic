@@ -25,6 +25,43 @@ when the user clicks a button I want that button to be filled in with an x or o
 
   })
 
+find a winner
+how can some one win?
+
+diagnial
+top right mid center bottom left
+top left mid center bottom right
+
+vertical
+top left mid left bottom left
+mid right mid center mid right
+top right mid right bottom right
+
+horizontal
+top left top mid top right
+top center mid center bottom center
+bottom right bottom center bottom right
+
+tell if its a tie
+if (count >= 9 && .everyting.hasClass(player)){
+  return tie
+}
+
+function {
+
+  var tieChecker = $('topRow').children()
+  $('topRow').children().each()
+  $.each(tieChecker, function(index, value){
+  console.log(index value)
+
+
+
+
+  })
+}
+
+
+
 
 
 reset = all elements.val(' ')

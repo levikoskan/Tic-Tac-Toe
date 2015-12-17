@@ -47,15 +47,21 @@
   border-right: 0;
 }
 
+p {
+  font-size: 5em;
+  text-align: center;
+  ;
+}
 
-.playerOneMove {
-  font-size: 10px;
-   justy-content: center;
+/*.playerOneMove {
+  font-size: 4em;
+
+
 }
 .playerTwoMove {
-  font-size: 10px;
-   justy-content: center;
-}
+  font-size: 50px;
+  align-content: center;
+}*/
 
 
 
