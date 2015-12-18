@@ -76,8 +76,12 @@ body {
 p {
   font-size: 5em;
   text-align: center;
-
+  color:#7B9971
 }
+#oText {
+  color: #CE6B5D;
+}
+
 
 @media (max-width: 991px){
 
@@ -112,10 +116,10 @@ p {
   color: #CE6B5D;
 }
 .xScore{
-  color: #941F1F;
+  color: #7B9971;
 }
 .oScore{
-  color: #34502B;
+  color: #CE6B5D;
 }
 .xSpot {
   background-color: #941F1F;
