@@ -44,6 +44,7 @@ $(function(){
 
   // button to start a new game. empties all the square elements
   $('.newGame').on('click', function(){
+
     //audio for new game button
 
     yes();

@@ -115,6 +115,7 @@ p {
 .scoreBoard{
   font-size: 20px;
   color: #CE6B5D;
+  font-family: 'Lora', serif;
 }
 .xScore{
   color: #7B9971;
