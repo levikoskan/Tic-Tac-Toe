@@ -352,7 +352,6 @@ $(function(){
 
 
 function playMe(){
-  console.log("heeeeey")
   var music= Math.round((Math.random()*(4))-1);
   return audioFiles[music];
 }

@@ -210,5 +210,10 @@ http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/toooldforthis.wav
 
 audioFiles=['#ninyMuggins'
 
+var picMyEarJoy = Math.round((Math.random()*(4))-1)
+
+  if ( picMyEarJoy <= 2){
+    $(stuff and things)
+  }
 
 
