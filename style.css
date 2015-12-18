@@ -10,6 +10,7 @@ body {
 
 .square {
   border: medium solid black;
+  border-radius: 10%;
   height: 100px;
   width: 100px;
 
@@ -69,7 +70,7 @@ p {
   margin-top: 20px;
   margin-bottom: 10px;
   margin-right: 8px;
-  position: relative;
+
 
 }
 
@@ -101,6 +102,7 @@ p {
 }
 .xSpot {
   background-color: #8E1F30;
+  border-radius: 10%;
 }
 .oSpot {
   background-color: #286E99;
@@ -112,5 +114,8 @@ p {
   font-size: 15px;
 }
 
-
+.hoverAction {
+  background-color: #E9F16B;
+  opacity: 0.5;
+}
 

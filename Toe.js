@@ -95,7 +95,13 @@ $(function(){
       }
     });
 
-
+  $('.square').hover(
+    function() {
+      $( this ).addClass('hoverAction');
+    }, function() {
+      $( this ).removeClass('hoverAction');
+    }
+  );
 
 
   function checkWinner(player){
