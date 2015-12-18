@@ -41,8 +41,19 @@ $(function(){
 
 
   // button to start a new game. empties all the square elements
-  $('#newGame').on('click', function(){
+  $('.newGame').on('click', function(){
+    //remove the X or O
     $('.square').empty();
+    // remove the background-color
+    $('div').find('.1').removeClass('xSpot');
+    $('div').find('.2').removeClass('oSpot');
+    //remove classes
+    $('div').find('.1').removeClass('1');
+    $('div').find('.2').removeClass('2');
+    count = 0;
+    playerMove = 0;
+    console.log(playerMove);
+
 
     $('.square').bind('click', function(){
     if (playerMove === 1){
@@ -64,12 +75,6 @@ $(function(){
       playerMove = 1;
     }
   });
-    //remove classes
-    $('div').find('.1').removeClass('1');
-    $('div').find('.2').removeClass('2');
-    count = 0;
-    playerMove = 0;
-    console.log(playerMove);
   });
 
 
@@ -80,6 +85,8 @@ $(function(){
       $('div').find('.2').unbind('click');
       count += 1
       console.log(count);
+      $('div').find('.1').addClass('xSpot');
+      $('div').find('.2').addClass('oSpot');
       // tie game conditional
       checkWinner(playerMove)
 
@@ -308,28 +315,6 @@ $(function(){
 
 });
 
-//adding the history of the player
-// function hisWins(){
-
-  // allTimesGamePlayed += 1;
-  // $('#allTimeHistory').empty();
-  // $('#allTimeHistory').append(allTimesGamePlayed);
-  // localStorage.setItem('allGameHistory', allTimeHistory);
-  // console.log(localStorage.setItem('allGameHistory', allTimeHistory));
-
-  // if (player === 1){
-  //   winsX += 1;
-  //   $('#xHistory').empty();
-  //   $('#xHistory').append(winsX);
-  // } else {
-  //   winsO += 1;
-  //   $('#oHistory').empty();
-  //   $('#oHistory').append(winsO);
-  // }
-
-
-
-// };
 
 
 

@@ -61,21 +61,56 @@ body {
 p {
   font-size: 5em;
   text-align: center;
-  ;
+
 }
 
-
-.nob {
-  text-align: center;
+@media (max-width: 991px){
+.butt{
   margin-top: 20px;
-
+  margin-bottom: 10px;
+  margin-right: 8px;
+  position: relative;
 
 }
 
+}
 
+@media (min-width: 992px){
+  #bottomButt{
+    margin-bottom: 0px
+  }
+  .butt {
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    top: -150px;
+    left: 0px;
+  }
+}
 
-
-
+.scoreBoard{
+  font-size: 20px;
+  color: white;
+}
+.xScore{
+  color: #8E1F30;
+}
+.oScore{
+  color: #286E99;
+}
+.xSpot {
+  background-color: #8E1F30;
+}
+.oSpot {
+  background-color: #286E99;
+}
+.tac {
+  font-size: 50px;
+}
+.toe {
+  font-size: 15px;
+}
 
 
 
