@@ -11,7 +11,6 @@ $(function(){
   var allTimesGamePlayed = 0;
   var picMyEarJoy = 0;
 
-
 //accessing the local storage value
   if(localStorage.getItem('allGameHistory')) {
   $('#allTimeHistory').html(localStorage.getItem('allGameHistory'));
