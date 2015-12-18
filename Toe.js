@@ -9,6 +9,8 @@ $(function(){
   var winsX = 0
   var winsO = 0
   var allTimesGamePlayed = 0;
+  var picMyEarJoy = 0;
+
 
 //accessing the local storage value
   if(localStorage.getItem('allGameHistory')) {
@@ -42,6 +44,15 @@ $(function(){
 
   // button to start a new game. empties all the square elements
   $('.newGame').on('click', function(){
+    //audio for new game button
+
+    yes();
+    if (picMyEarJoy <=2){
+        $('.earJoy').html('<audio autoplay><source src="http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/throwneoflies.wav" type="audio/wav"></audio>');
+    } else {
+      $('.earJoy').html('<audio autoplay><source src="http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/toooldforthis.wav" type="audio/wav"></audio>');
+    }
+
     //remove the X or O
     $('.square').empty();
     // remove the background-color
@@ -74,12 +85,15 @@ $(function(){
       $(this).addClass('1');
       playerMove = 1;
     }
+
   });
   });
 
 
   //Submit your move button. no going back, count for tie conditional
     $('#submit').on('click', function() {
+
+      yes();
 
       $('div').find('.1').unbind('click');
       $('div').find('.2').unbind('click');
@@ -88,7 +102,18 @@ $(function(){
       $('div').find('.1').addClass('xSpot');
       $('div').find('.2').addClass('oSpot');
       // tie game conditional
-      checkWinner(playerMove)
+      checkWinner(playerMove);
+
+      //audio player
+      if (picMyEarJoy <=1){
+        $('.earJoy').html('<audio autoplay><source src="http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/whatinthename.wav" type="audio/wav"></audio>')
+      }else if (picMyEarJoy <=2){
+        $('.earJoy').html('<audio autoplay><source src="http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/ninnymuggins.wav" type="audio/wav"></audio>');
+      }else if (picMyEarJoy <=3){
+        $('.earJoy').html('<audio autoplay><source src="http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/sonofanut.wav" type="audio/wav"></audio>');
+      }else{
+        $('.earJoy').html('<audio autoplay><source src="http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/needahug.wav" type="audio/wav"></audio>');
+      }
 
       if (count >= 9 && theGame === false) {
       alert("Cat's Tail");
@@ -103,6 +128,10 @@ $(function(){
     }
   );
 
+  function yes(){
+      picMyEarJoy = Math.ceil((Math.random()*(4)));
+      console.log("hey" +picMyEarJoy);
+      }
 
   function checkWinner(player){
 
@@ -322,7 +351,11 @@ $(function(){
 });
 
 
-
+function playMe(){
+  console.log("heeeeey")
+  var music= Math.round((Math.random()*(4))-1);
+  return audioFiles[music];
+}
 
 
 

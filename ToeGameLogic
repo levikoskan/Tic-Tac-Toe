@@ -147,33 +147,68 @@ if (player === 1){
 
 
 
+<audio autoplay>
+          <source src="http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/whatinthename.wav" type="audio/ogg">
+        </audio>
 
 
 
 
+source src="playMe()"
+
+
+audioFiles=[
+
+"$('.earJoy').html('<audio autoplay><source src='http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/whatinthename.wav' type='audio/wav'></audio>')",
+"
+$('.earJoy').html('<audio autoplay><source src='http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/ninnymuggins.wav' type='audio/wav'></audio>');
+",
+"
+$('.earJoy').html('<audio autoplay><source src='http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/needahug.wav
+' type='audio/wav'></audio>');
+",
+"
+$('.earJoy').html('<audio autoplay><source src='http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/throwneoflies.wav' type='audio/wav'></audio>');
+",
+"
+$('.earJoy').html('<audio autoplay><source src='http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/sonofanut.wav' type='audio/wav'></audio>');
+",
+"
+$('.earJoy').html('<audio autoplay><source src='http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/toooldforthis.wav' type='audio/wav'></audio>');
+"]
 
 
 
+function playMe(){
+  var music= Math.round((Math.random()(4))-1);
+  return audioFiles[music];
+}
+
+arry will have the ids
+need to have the elements in the html and then play them with ids
+
+function playMe(){
+  var music= Math.round((Math.random()(4))-1);
+  return audioFiles[music].play();
+}
 
 
+ninyMuggins
+http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/ninnymuggins.wav
 
+thronOfLies
+http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/throwneoflies.wav
 
+SonOfNutcraker
+http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/sonofanut.wav
 
+hug
+http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/needahug.wav
 
+toOld
+http://www.gotwavs.com/0053148414/WAVS/Movies/Elf/toooldforthis.wav
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+audioFiles=['#ninyMuggins'
 
 
 
