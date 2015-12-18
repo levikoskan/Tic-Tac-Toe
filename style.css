@@ -1,10 +1,12 @@
 body {
-  background-color: green;
-
+  background-color: #7B9971;
+  opacity: .9;
 }
 
 .boardGame {
-  background-color: grey;
+  background-image: url("http://www.vitamin-ha.com/wp-content/uploads/2013/12/Funny-Christmas-Photos-26.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -13,13 +15,25 @@ body {
   border-radius: 10%;
   height: 100px;
   width: 100px;
+  background-color: #FFEFB9;
+  opacity: 0.9;
 
  }
 
  h1{
   text-align: center;
+  background-color: #34502B;
+  border-radius: 0%;
+  opacity: 0.9;
 }
 
+.hisTable {
+  background-color: #34502B;
+  border: 5px solid #FFEFB9;
+  color: #FFEFB9;
+  opacity: 0.9;
+
+}
 
 
 
@@ -66,6 +80,9 @@ p {
 }
 
 @media (max-width: 991px){
+
+
+
 .butt{
   margin-top: 20px;
   margin-bottom: 10px;
@@ -92,30 +109,59 @@ p {
 
 .scoreBoard{
   font-size: 20px;
-  color: white;
+  color: #CE6B5D;
 }
 .xScore{
-  color: #8E1F30;
+  color: #941F1F;
 }
 .oScore{
-  color: #286E99;
+  color: #34502B;
 }
 .xSpot {
-  background-color: #8E1F30;
+  background-color: #941F1F;
   border-radius: 10%;
+  opacity: 0.9;
 }
 .oSpot {
-  background-color: #286E99;
+  background-color: #34502B;
+  border-radius: 10%;
+  opacity: 0.9;
+}
+#tic {
+  color: #941F1F;
 }
 .tac {
   font-size: 50px;
 }
 .toe {
-  font-size: 15px;
+  font-size: 25px;
+  color: #FFEFB9;
 }
 
 .hoverAction {
   background-color: #E9F16B;
   opacity: 0.5;
 }
+
+.rightPic {
+  position: relative;
+  margin-right: -100px;
+}
+
+#submit{
+  background-color: #CE6B5D;
+  color: #34502B;
+
+}
+
+#bottomButt{
+  background-color: #7B9971;
+  color: #941F1F;
+
+}
+
+
+
+
+
 
