@@ -76,7 +76,8 @@ body {
 p {
   font-size: 5em;
   text-align: center;
-  color:#7B9971
+  color:#7B9971;
+  font-family: 'Sarina', cursive;
 }
 #oText {
   color: #CE6B5D;

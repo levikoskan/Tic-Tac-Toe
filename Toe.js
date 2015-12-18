@@ -23,7 +23,7 @@ $(function(){
   $('.square').on('click', function () {
       if (playerMove === 1){
         $(this).empty();
-        $(this).html('<p id="oText">o</p>');
+        $(this).html('<p id="oText">O</p>');
         $(this).removeClass('1')
         $(this).addClass('2');
         playerMove = 2;
@@ -35,7 +35,7 @@ $(function(){
         playerMove = 0;
 
       } else {
-        $(this).html('<p>x</p>');
+        $(this).html('<p>X</p>');
         $(this).addClass('1');
         playerMove = 1;
       }
